@@ -106,9 +106,11 @@ function typeEffect() {
 
 typeEffect();
 
-input.addEventListener("keydown", function(e) {
+input.addEventListener("keypress", function(e) {
   if (e.key === "Enter") {
-    const command = input.value;
+    e.preventDefault(); // important
+
+    const command = input.value.trim();
     terminal.innerHTML += "> " + command + "<br>";
 
     if (command === "help") {
