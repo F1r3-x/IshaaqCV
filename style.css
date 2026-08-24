@@ -103,3 +103,8 @@ body::before {
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+#input::placeholder {
+  color: #00ff9c;
+  opacity: 0.5;
+}
