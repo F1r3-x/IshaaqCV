@@ -67,6 +67,66 @@ let i = 0; function typeEffect() {
 
 typeEffect();
 </script>
+
+<script>
+const terminal = document.getElementById("terminal");
+const input = document.getElementById("input");
+
+const lines = [
+  "> whoami",
+  "ishaaq",
+  "",
+  "> role",
+  "cybersecurity student",
+  "",
+  "> focus",
+  "penetration testing",
+  ""
+];
+
+let i = 0;
+let j = 0;
+
+function typeEffect() {
+  if (i < lines.length) {
+    if (j < lines[i].length) {
+      terminal.innerHTML += lines[i][j];
+      j++;
+      setTimeout(typeEffect, 20);
+    } else {
+      terminal.innerHTML += "<br>";
+      i++;
+      j = 0;
+      setTimeout(typeEffect, 200);
+    }
+  }
+}
+
+typeEffect();
+
+input.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    const command = input.value;
+    terminal.innerHTML += "> " + command + "<br>";
+
+    if (command === "help") {
+      terminal.innerHTML += "commands: help, projects, clear<br>";
+    } 
+    else if (command === "projects") {
+      terminal.innerHTML += "opening projects page...<br>";
+      setTimeout(() => window.location.href = "projects.html", 800);
+    } 
+    else if (command === "clear") {
+      terminal.innerHTML = "";
+    } 
+    else {
+      terminal.innerHTML += "unknown command<br>";
+    }
+
+    input.value = "";
+  }
+});
+</script>
   
 </body>
 </html>
