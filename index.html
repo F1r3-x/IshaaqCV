@@ -137,9 +137,42 @@ window.onload = function () {
   }, 600);
 }
 
-      else {
-        terminal.innerHTML += "unknown command<br>";
-      }
+      else if (command === "skills") {
+  terminal.innerHTML += "Skills:<br>- Linux<br>- Networking basics<br>- Cybersecurity fundamentals<br>";
+}
+
+else if (command === "about") {
+  terminal.innerHTML += "I am Ishaaq, an aspiring cybersecurity specialist focused on penetration testing.<br>";
+}
+
+else if (command === "contact") {
+  terminal.innerHTML += "Telegram: @YourUsername<br>";
+}
+
+else if (command === "github") {
+  terminal.innerHTML += "Opening GitHub...<br>";
+  setTimeout(() => {
+    window.open("https://github.com/F1r3-x", "_blank");
+  }, 600);
+}
+
+else if (command === "cv") {
+  terminal.innerHTML += "opening CV...<br>";
+  setTimeout(() => {
+    window.location.href = "cv.html";
+  }, 600);
+}
+
+else if (command === "sudo apt install ishaaq.cv") {
+  terminal.innerHTML += "Installing Ishaaq CV package...<br>";
+  setTimeout(() => {
+    window.location.href = "cv.html";
+  }, 1200);
+}
+
+else {
+  terminal.innerHTML += "unknown command — type 'help'<br>";
+}
 
       input.value = "";
     }
