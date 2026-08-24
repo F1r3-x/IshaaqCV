@@ -21,6 +21,21 @@
 
   <h1 class="title">Aspiring Cybersecurity Specialist - CV</h1>
 
+  <script id="typing-script">
+const text = "Aspiring Cybersecurity Specialist - CV";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 50);
+  }
+}
+
+typeEffect();
+</script>
+
   <p style="text-align:center; opacity:0.8;">
     Learning penetration testing through hands-on labs and practical security practice.
   </p>
