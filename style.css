@@ -73,8 +73,9 @@ body::before {
 
 .card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 20px rgba(58,134,255,0.5);
+  box-shadow: 0 0 25px rgba(58,134,255,0.7);
   border-color: #3a86ff;
+}
 }
 
 /* Buttons */
@@ -90,4 +91,15 @@ body::before {
 
 .btn:hover {
   background: #2f6edc;
+}
+
+#typing::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
 }
