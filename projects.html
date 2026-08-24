@@ -1,34 +1,43 @@
+Projects.html add:
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Projects</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body <body style="font-family: Arial; background:#0f1115; color:white; padding:20px; max-width:900px; margin:auto;">
+<body>
 
-<h1 style="text-align:center;">My Cybersecurity Projects</h1>
-
-<p style="text-align:center; opacity:0.8;">
-Hands-on learning through TryHackMe labs and practical security fundamentals.
-</p>
-
-<h1>My Projects</h1>
-
-<div style="background:#1a1f2b; padding:15px; margin-bottom:15px; border-radius:10px;">
-
-  <h2>TryHackMe - Defensive Security Intro</h2>
-  <p>Completed an introductory blue team module covering SOCs, SIEMs, and defensive security principles.</p>
-  <p><b>Skills learned:</b> Log analysis, threat detection, SOC basics</p>
-  <a href="https://tryhackme.com/room/defensivesecurityintro">View Room</a>
-
+<div class="navbar">
+  <div><b>Ishaaq</b></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+  </div>
 </div>
 
-  <div style="background:#1a1f2b; padding:15px; margin-bottom:15px; border-radius:10px;">
+<div class="container">
 
-  <h2>TryHackMe - Offensive Security Intro</h2>
-  <p>Completed an introductory module covering basic offensive security concepts and how attackers identify and exploit weaknesses.</p>
-  <p><b>Skills learned:</b> Reconnaissance basics, vulnerability awareness, attacker mindset</p>
-  <a href="https://tryhackme.com/room/offensivesecurityintro">View Room</a>
+  <h1 class="title">My Projects</h1>
+
+  <div class="projects">
+
+    <div class="card">
+      <h2>🛡️ Defensive Security Intro</h2>
+      <p>Introduction to defensive cybersecurity concepts.</p>
+      <p><b>Skills:</b> Threat awareness, basics of protection</p>
+      <a class="btn" href="https://tryhackme.com/room/defensivesecurityintro">View</a>
+    </div>
+
+    <div class="card">
+      <h2>🔓 Offensive Security Intro</h2>
+      <p>Understanding how attackers identify vulnerabilities.</p>
+      <p><b>Skills:</b> Recon basics, attacker mindset</p>
+      <a class="btn" href="https://tryhackme.com/room/offensivesecurityintro">View</a>
+    </div>
+
+  </div>
 
 </div>
 
