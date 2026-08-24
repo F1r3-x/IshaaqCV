@@ -44,85 +44,21 @@ style="width:100%; background:black; border:none; color:#00ff9c; outline:none; f
 
 </div>
 
-<script id="typing-script">
-const text = "Aspiring Cybersecurity Specialist";
-let i = 0; function typeEffect() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 50);
-  }
-}
-
-typeEffect();
-</script>
-
 <script>
 window.onload = function() {
+
 const terminal = document.getElementById("terminal");
 const input = document.getElementById("input");
 
-const lines = [
-  "> whoami",
-  "ishaaq",
-  "",
-  "> role",
-  "cybersecurity student",
-  "",
-  "> focus",
-  "penetration testing",
-  ""
-];
+terminal.innerHTML = "Terminal loaded...<br>";
 
-let i = 0;
-let j = 0;
-
-function typeEffect() {
-  if (i < lines.length) {
-    if (j < lines[i].length) {
-      terminal.innerHTML += lines[i][j];
-      j++;
-      setTimeout(typeEffect, 20);
-    } else {
-      terminal.innerHTML += "<br>";
-      i++;
-      j = 0;
-      setTimeout(typeEffect, 200);
-    }
-  }
-}
-
-typeEffect();
-
-input.addEventListener("keypress", function(e) {
+input.addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
-    e.preventDefault(); // important
-
-    const command = input.value.trim();
-    terminal.innerHTML += "> " + command + "<br>";
-
-    if (command === "help") {
-      terminal.innerHTML += "commands: help, projects, clear<br>";
-    } 
-    else if (command === "projects") {
-      terminal.innerHTML += "opening projects page...<br>";
-      setTimeout(() => window.location.href = "projects.html", 800);
-    } 
-    else if (command === "clear") {
-      terminal.innerHTML = "";
-
-      else if (command === "whoami") {
-  terminal.innerHTML += "ishaaq - aspiring pentester<br>";
-}
-      
-    
-    else {
-      terminal.innerHTML += "unknown command<br>";
-    }
-
+    terminal.innerHTML += "> " + input.value + "<br>";
     input.value = "";
   }
 });
+
 }
 </script>
   
