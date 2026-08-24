@@ -115,6 +115,13 @@ window.onload = function () {
         terminal.innerHTML += "ishaaq - aspiring pentester<br>";
       }
 
+        else if (command === "cv") {
+  terminal.innerHTML += "opening CV...<br>";
+  setTimeout(() => {
+    window.location.href = "cv.html";
+  }, 600);
+}
+
       else {
         terminal.innerHTML += "unknown command<br>";
       }
